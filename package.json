@@ -1,0 +1,58 @@
+{
+  "name": "vue-desktop-basic",
+  "version": "0.1.0",
+  "description": "Boilerplate for a Vue based Desktop App",
+  "main": "index.html",
+  "scripts": {
+    "start": "nw .",
+    "build": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ ."
+  },
+  "keywords": [
+    "vue",
+    "boilerplate",
+    "desktop"
+  ],
+  "author": "USERNAME@users.noreply.github.com",
+  "license": "MIT",
+  "window": {
+    "width": 800,
+    "height": 500
+  },
+  "dependencies": {
+    "http-vue-loader": "1.x.x",
+    "vue": "2.x.x",
+    "vue-router": "3.x.x",
+    "vuex": "3.x.x"
+  },
+  "devDependencies": {
+    "nw": "sdk",
+    "nwjs-builder-phoenix": "^1.x.x"
+  },
+  "build": {
+    "nwVersion": "latest",
+    "nwFlavor": "normal",
+    "targets": [
+      "zip",
+      "nsis7z"
+    ],
+    "excludes": [
+      "package-lock.json",
+      "assets/*"
+    ],
+    "win": {
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "icon": "assets/icon.icns"
+    },
+    "nsis": {
+      "icon": "assets/icon.ico",
+      "unIcon": "assets/icon.ico",
+      "languages": [
+        "English"
+      ],
+      "diffUpdaters": false,
+      "hashCalculation": true
+    }
+  }
+}

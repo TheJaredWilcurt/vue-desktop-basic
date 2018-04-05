@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example of opening another window</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    See the "Tips" section for more information.
+    <script>
+      nw.Window.get().showDevTools();
+      console.log('nw.global.cow');
+      console.log(nw.global.cow);
+      console.log('That value was set in the first window, but is accessible in this second window.')
+    </script>
+  </body>
+</html>
