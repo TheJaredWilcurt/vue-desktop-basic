@@ -1,4 +1,5 @@
-var router = new VueRouter({
+// eslint-disable-next-line no-unused-vars
+const router = new VueRouter({
   routes: [
     {
       path: '*',

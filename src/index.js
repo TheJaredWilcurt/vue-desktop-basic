@@ -1,7 +1,8 @@
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
-var app = new Vue({
+// eslint-disable-next-line no-unused-vars
+const app = new Vue({
   el: '#app',
   components: {
     App: httpVueLoader('src/app.vue')

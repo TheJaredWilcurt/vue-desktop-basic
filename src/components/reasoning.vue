@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  module.exports = {
-    name: 'reasoning'
-  };
+module.exports = {
+  name: 'reasoning'
+};
 </script>

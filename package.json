@@ -5,7 +5,10 @@
   "main": "index.html",
   "scripts": {
     "start": "nw .",
-    "build": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ ."
+    "build": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "lint": "eslint --config=.eslintrc.js src/**/*.js src/**/*.vue",
+    "fix": "eslint --fix --config=.eslintrc.js src/**/*.js src/**/*.vue",
+    "sasslint": "sass-lint -c .sass-lint.yml -v -f table"
   },
   "keywords": [
     "vue",
@@ -25,8 +28,12 @@
     "vuex": "3.x.x"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "4.x.x",
+    "eslint-plugin-vue": "4.x.x",
     "nw": "sdk",
-    "nwjs-builder-phoenix": "^1.x.x"
+    "nwjs-builder-phoenix": "1.x.x",
+    "sass-lint": "1.x.x"
   },
   "build": {
     "nwVersion": "latest",

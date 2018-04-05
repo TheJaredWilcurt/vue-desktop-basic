@@ -6,13 +6,16 @@
 
     <!-- Vue Router  -->
     <nav>
-      <router-link v-for="route in router.options.routes" :to="route.path" v-if="route.component">
+      <router-link
+        v-for="(route, index) in router.options.routes"
+        v-if="route.component"
+        :to="route.path"
+        :key="index"
+      >
         {{ route.name }}
       </router-link>
       |
-      <a href="#" @click.prevent="openDevTools">
-        Open Dev Tools
-      </a>
+      <a href="#" @click.prevent="openDevTools">Open Dev Tools</a>
     </nav>
 
     <router-view />
@@ -21,22 +24,22 @@
 </template>
 
 <script>
-  module.exports = {
-    name: 'app',
-    data: function () {
-      return {};
-    },
-    methods: {
-      openDevTools: function () {
-        nw.Window.get().showDevTools();
-      }
-    },
-    computed: {
-      greeting: function () {
-        return this.$store.state.greeting;
-      }
+module.exports = {
+  name: 'app',
+  data: function () {
+    return {};
+  },
+  methods: {
+    openDevTools: function () {
+      nw.Window.get().showDevTools();
     }
-  };
+  },
+  computed: {
+    greeting: function () {
+      return this.$store.state.greeting;
+    }
+  }
+};
 </script>
 
 <style>

@@ -22,15 +22,15 @@
 </template>
 
 <script>
-  module.exports = {
-    name: 'restrictions',
-    computed: {
-      chromiumVersion: function () {
-        return nw.process.versions.chromium;
-      },
-      nodeVersion: function () {
-        return nw.process.versions.node;
-      }
+module.exports = {
+  name: 'restrictions',
+  computed: {
+    chromiumVersion: function () {
+      return nw.process.versions.chromium;
+    },
+    nodeVersion: function () {
+      return nw.process.versions.node;
     }
-  };
+  }
+};
 </script>
