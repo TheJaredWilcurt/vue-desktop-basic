@@ -43,35 +43,6 @@ module.exports = {
 </script>
 
 <style>
-body {
-  font-family: "Century Gothic", "Trebuchet MS", Tahoma, sans-serif;
-}
-
-h2 {
-  border-top: 3px solid #000;
-  padding-top: 1.2em;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0px 10px;
-  text-transform: capitalize;
-}
-
-li {
-  padding-top: 7px;
-  line-height: 1.5;
-}
-
-h2 + ul > li:first-of-type {
-  padding-top: 0px;
-}
-
-code {
-  background: #EDEDED;
-  font-size: 15px;
-}
-
 .router-link-active {
   border: 1px solid #00F;
   border-radius: 50px;

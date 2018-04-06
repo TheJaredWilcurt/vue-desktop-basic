@@ -8,6 +8,7 @@
     "build": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
     "lint": "eslint --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "fix": "eslint --fix --config=.eslintrc.js src/**/*.js src/**/*.vue",
+    "sass": "node-sass -w -i -o=src/css --output-style=expanded --error-bell ./src/sass",
     "sasslint": "sass-lint -c .sass-lint.yml -v -f table"
   },
   "keywords": [
@@ -19,7 +20,8 @@
   "license": "MIT",
   "window": {
     "width": 800,
-    "height": 500
+    "height": 500,
+    "icon": "assets/icon.png"
   },
   "dependencies": {
     "http-vue-loader": "1.x.x",
@@ -31,6 +33,7 @@
     "babel-eslint": "^8.2.2",
     "eslint": "4.x.x",
     "eslint-plugin-vue": "4.x.x",
+    "node-sass": "^4.8.3",
     "nw": "sdk",
     "nwjs-builder-phoenix": "1.x.x",
     "sass-lint": "1.x.x"

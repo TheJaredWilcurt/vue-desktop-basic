@@ -19,6 +19,7 @@ This is a boilerplate for a simple desktop app. It comes with **Vue**, **Vue-Rou
 
 1. `npm run lint` will lint your `.js` and `.vue` files according to the rules in `.eslintrc.js`
 1. `npm run fix` this will auto-fix any linting issues that `npm run lint` finds (not everything can be auto fixed)
+1. `npm run sass` will start watching for changes in the sass folder and process the changes to the css folder.
 1. `npm run sasslint` will lint your `.sass` and `.scss` files.
 
 
