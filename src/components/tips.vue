@@ -3,7 +3,7 @@
     <h2>Tips:</h2>
     <ul>
       <li>
-        A best practice is to store your user's settings as a json file in <code>nw.App.dataPath</code>. This location is specific to the currently logged in computer user, your app, and the OS. On your computer the path would be:
+        A best practice is to store your user's settings as a json file in <code>nw.App.dataPath</code>. This location is specific to the currently logged in computer user, your app, and the OS. On <em>your</em> computer the path would be:
         <ul>
           <li><code>require('path').join(nw.App.dataPath, 'settings.json');</code></li>
           <li><code>{{ settingsFile }}</code></li>
@@ -38,14 +38,14 @@
       <li>
         Using <code>var win = nw.Window.get();</code> you have access to many controls over the current window.
         <ul>
-          <li><a href="#"><code @click="nw.Window.get().maximize()">                 win.maximize();</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().restore()">                  win.restore();</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().minimize()">                 win.minimize();</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().showDevTools()">             win.showDevTools();</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().print({autoprint: false})">  win.print({autoprint: false})</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().reload()">                   win.reload();</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().reloadIgnoringCache()">      win.reloadIgnoringCache();</code></a></li>
-          <li><a href="#"><code @click="nw.Window.get().close()">                    win.close();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().maximize()">                 win.maximize();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().restore()">                  win.restore();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().minimize()">                 win.minimize();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().showDevTools()">             win.showDevTools();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().print({autoprint: false})">  win.print({autoprint: false})</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().reload()">                   win.reload();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().reloadIgnoringCache()">      win.reloadIgnoringCache();</code></a></li>
+          <li><a href="#"><code @click.prevent="nw.Window.get().close()">                    win.close();</code></a></li>
         </ul>
       </li>
       <li>

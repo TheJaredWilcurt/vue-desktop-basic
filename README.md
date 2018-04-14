@@ -34,3 +34,9 @@ All settings regarding the build are handled in the `package.json`.
 * * *
 
 All other instructions and details are inside the app.
+
+* * *
+
+### TO DO List:
+
+* Add in Vue-Test-Utils
