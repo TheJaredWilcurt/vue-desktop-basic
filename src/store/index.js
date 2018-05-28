@@ -4,7 +4,11 @@ const store = new Vuex.Store({
     greeting: 'Hello'
   },
   getters: {},
-  mutations: {},
+  mutations: {
+    changeGreeting: function (state, newGreeting) {
+      state.greeting = newGreeting;
+    }
+  },
   actions: {}
 });
 

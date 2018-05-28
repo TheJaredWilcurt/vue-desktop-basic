@@ -48,6 +48,59 @@ module.exports = {
         'space-in-parens':             ['error', 'never'],
         'space-infix-ops':             ['error'],
         'spaced-comment':              ['error', 'always'],
-        'vue/max-attributes-per-line': ['error', { 'singleline': 3, 'multiline': { 'max': 1, 'allowFirstLine': false } } ]
+        // Vue Linter Options
+        'vue/attribute-hyphenation':    ['error', 'never'],
+        'vue/html-closing-bracket-newline':
+                                        ['error', {
+                                            'singleline': 'never',
+                                            'multiline': 'always'
+                                        }],
+        'vue/html-closing-bracket-spacing':
+                                        ['error', {
+                                            'startTag': 'never',
+                                            'endTag': 'never',
+                                            'selfClosingTag': 'always'
+                                        }],
+        'vue/html-indent':              ['error', 2, {
+                                            'attribute': 1,
+                                            'closeBracket': 0
+                                        }],
+        'vue/html-self-closing':        ['error', {
+                                            'html': {
+                                                'void': 'always',
+                                                'normal': 'never',
+                                                'component': 'always'
+                                            }
+                                        }],
+        'vue/max-attributes-per-line':  ['error', {
+                                            'singleline': 3,
+                                            'multiline': {
+                                                'max': 1,
+                                                'allowFirstLine': false
+                                            }
+                                        }],
+        'vue/name-property-casing':     ['error', 'PascalCase'],
+        'vue/order-in-components':      ['error', { 'order': [
+                                            'el',
+                                            'name',
+                                            ['template', 'render'],
+                                            'parent',
+                                            'functional',
+                                            ['delimiters', 'comments'],
+                                            ['components', 'directives'],
+                                            'extends',
+                                            'mixins',
+                                            'inheritAttrs',
+                                            'model',
+                                            ['props', 'propsData'],
+                                            'data',
+                                            'methods',
+                                            'computed',
+                                            'filters',
+                                            'watch',
+                                            'LIFECYCLE_HOOKS',
+                                            'renderError'
+                                        ]}],
+        'vue/prop-name-casing':         ['error', 'camelCase']
     }
 };
