@@ -4,7 +4,18 @@
 
 ## What is this
 
-This is a boilerplate for a simple desktop app. It comes with **Vue**, **Vue-Router**, and **Vuex** already set up. It also comes with tips about common tasks for a desktop app.
+This is a boilerplate for a simple desktop app. It comes with tips about common tasks for a desktop app.
+
+### Features
+
+The following are already set up:
+
+* Vue.js
+* Vue-Router
+* Vuex
+* Sass
+* Sasslint
+* ESLint
 
 
 ## Usage
