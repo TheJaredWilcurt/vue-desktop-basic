@@ -50,6 +50,20 @@ module.exports = {
         'spaced-comment':              ['error', 'always'],
         // Vue Linter Options
         'vue/attribute-hyphenation':    ['error', 'never'],
+        'vue/attributes-order':         ['error', {
+                                          'order': [
+                                            'LIST_RENDERING',   // 'v-for item in items'
+                                            'CONDITIONALS',     // 'v-if', 'v-else-if', 'v-else', 'v-show', 'v-cloak'
+                                            'RENDER_MODIFIERS', // 'v-once', 'v-pre'
+                                            'BINDING',          // 'v-model', 'v-bind', ':property="foo"'
+                                            'CONTENT',          // 'v-text', 'v-html'
+                                            'DEFINITION',       // 'is'
+                                            'GLOBAL',           // 'id'
+                                            'OTHER_ATTR',       // 'customProp="foo"', 'class', 'type', 'value' etc
+                                            'EVENTS',           // '@click="functionCall"', 'v-on="event"'
+                                            'UNIQUE'            // 'slot', 'key', 'ref'
+                                          ]
+                                        }],
         'vue/html-closing-bracket-newline':
                                         ['error', {
                                             'singleline': 'never',
