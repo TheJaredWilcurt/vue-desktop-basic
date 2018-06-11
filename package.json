@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "nw .",
+    "postinstall": "node postinstall.js",
     "build": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
     "lint": "eslint --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "fix": "eslint --fix --config=.eslintrc.js src/**/*.js src/**/*.vue",
@@ -23,6 +24,8 @@
     "height": 500,
     "icon": "assets/icon.png"
   },
+  "chrom0ium-args": "--load-extension='./node_modules/vue-devtools/shells/chrome'",
+  "chromium-args": "--load-extension='./vue-devtools'",
   "dependencies": {
     "http-vue-loader": "1.x.x",
     "vue": "2.x.x",
@@ -30,10 +33,10 @@
     "vuex": "3.x.x"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "8.x.x",
     "eslint": "4.x.x",
     "eslint-plugin-vue": "4.x.x",
-    "node-sass": "^4.8.3",
+    "node-sass": "4.x.x",
     "nw": "sdk",
     "nwjs-builder-phoenix": "1.x.x",
     "sass-lint": "1.x.x"
