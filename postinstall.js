@@ -58,6 +58,7 @@ let postInstall = {
     }
   },
   runEverything: function () {
+    // If we've already ran this once, we don't need to re-run it on every `npm install`
     if (fs.existsSync('node_modules') && fs.existsSync('node_modules/vue-devtools')) {
       return;
     }
