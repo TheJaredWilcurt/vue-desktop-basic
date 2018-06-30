@@ -85,6 +85,9 @@ module.exports = {
       let path = nw.require('path');
       let settingsFileLocation = path.join(nw.App.dataPath, 'settings.json');
       return settingsFileLocation;
+    },
+    nw: function () {
+      return nw;
     }
   }
 };

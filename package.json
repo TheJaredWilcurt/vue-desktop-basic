@@ -24,8 +24,7 @@
     "height": 500,
     "icon": "assets/icon.png"
   },
-  "chrom0ium-args": "--load-extension='./node_modules/vue-devtools/shells/chrome'",
-  "chromium-args": "--load-extension='./vue-devtools'",
+  "chromium-args": "--load-extension='./node_modules/vue-devtools/shells/chrome'",
   "dependencies": {
     "http-vue-loader": "1.x.x",
     "vue": "2.x.x",
