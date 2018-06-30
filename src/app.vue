@@ -7,10 +7,10 @@
     <!-- Vue Router  -->
     <nav>
       <router-link
-        v-for="(route, index) in routes"
+        v-for="(route, index) in $router.options.routes"
         v-if="route.component"
         :to="route.path"
-        :key="index"
+        :key="'route' + index"
       >
         {{ route.name }}
       </router-link>
@@ -37,9 +37,6 @@ module.exports = {
   computed: {
     greeting: function () {
       return this.$store.state.greeting;
-    },
-    routes: function () {
-      return router.options.routes;
     }
   }
 };
