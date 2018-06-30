@@ -36,7 +36,7 @@
         </ul>
       </li>
       <li>
-        Using <code>var win = nw.Window.get();</code> you have access to many controls over the current window.
+        Using <code>const win = nw.Window.get();</code> you have access to many controls over the current window.
         <ul>
           <li><a href="#"><code @click.prevent="nw.Window.get().maximize()">                 win.maximize();</code></a></li>
           <li><a href="#"><code @click.prevent="nw.Window.get().restore()">                  win.restore();</code></a></li>

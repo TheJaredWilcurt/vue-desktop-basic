@@ -13,6 +13,7 @@ The following are already set up:
 * Vue.js
 * Vue-Router
 * Vuex
+* Vue-DevTools
 * Sass
 * Sasslint
 * ESLint
