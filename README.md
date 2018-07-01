@@ -6,6 +6,7 @@
 
 This is a boilerplate for a simple desktop app. It comes with tips about common tasks for a desktop app.
 
+
 ### Features
 
 The following are already set up:
@@ -41,6 +42,13 @@ The following are already set up:
 1. `npm run build`
 
 All settings regarding the build are handled in the `package.json`.
+
+
+### Vue-DevTools
+
+There is a `postinstall` script that will run automatically after performing `npm install`. If it does not detect Vue-DevTools, it will download and set it up automatically.
+
+**Note:** If you want Vue-DevTools to accessible in the Chromium DevTools in your app, you cannot use the minified version of Vue.js (`vue.js` not `vue.min.js`).
 
 
 * * *
