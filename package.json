@@ -1,30 +1,30 @@
 {
   "name": "vue-desktop-basic",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Boilerplate for a Vue based Desktop App",
+  "keywords": [
+    "vue",
+    "boilerplate",
+    "desktop"
+  ],
+  "author": "TheJaredWilcurt@users.noreply.github.com",
+  "license": "MIT",
+  "repository": "https://github.com/TheJaredWilcurt/vue-desktop-basic",
   "main": "index.html",
   "scripts": {
     "start": "nw .",
-    "postinstall": "node postinstall.js",
     "build": "build --concurrent --tasks win-x86,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
     "lint": "eslint --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "fix": "eslint --fix --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "sass": "node-sass -w -i -o=src/css --output-style=expanded --error-bell ./src/sass",
     "sasslint": "sass-lint -c .sass-lint.yml -v -f table"
   },
-  "keywords": [
-    "vue",
-    "boilerplate",
-    "desktop"
-  ],
-  "author": "USERNAME@users.noreply.github.com",
-  "license": "MIT",
   "window": {
     "width": 800,
     "height": 500,
     "icon": "assets/icon.png"
   },
-  "chromium-args": "--load-extension='./node_modules/vue-devtools/shells/chrome'",
+  "chromium-args": "--load-extension='./node_modules/nw-vue-devtools/extension'",
   "dependencies": {
     "http-vue-loader": "1.x.x",
     "vue": "2.x.x",
@@ -37,6 +37,7 @@
     "eslint-plugin-vue": "4.x.x",
     "node-sass": "4.x.x",
     "nw": "sdk",
+    "nw-vue-devtools": "1.x.x",
     "nwjs-builder-phoenix": "1.x.x",
     "sass-lint": "1.x.x"
   },
@@ -49,7 +50,14 @@
     ],
     "excludes": [
       "package-lock.json",
-      "assets/*"
+      "assets/*",
+      "src/sass/*"
+    ],
+    "strippedProperties": [
+      "chromium-args",
+      "scripts",
+      "devDependencies",
+      "build"
     ],
     "win": {
       "icon": "assets/icon.ico"

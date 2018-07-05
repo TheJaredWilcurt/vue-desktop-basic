@@ -70,18 +70,20 @@ module.exports = {
     // Check that the dependency exists, then read it's version number from its manifest
     getVersionNumber: function (packageName) {
       let fs = nw.require('fs');
-      if (
-        fs.existsSync('./node_modules') &&
-        fs.existsSync('./node_modules/' + packageName) &&
-        fs.existsSync('./node_modules/' + packageName + '/package.json')
-      ) {
-        let manifest = fs.readFileSync('./node_modules/vue-devtools/package.json');
+      let manifest = '';
+      let version = '';
+
+      if (fs.existsSync('./node_modules/' + packageName + '/package.json')) {
+        manifest = fs.readFileSync('./node_modules/' + packageName + '/package.json');
+      } else if (packageName === 'vue-devtools' && fs.existsSync('./node_modules/nw-vue-devtools/src/vue-devtools/package.json')) {
+        manifest = fs.readFileSync('./node_modules/nw-vue-devtools/src/vue-devtools/package.json');
+      }
+      if (manifest) {
         manifest = manifest.toString();
         manifest = JSON.parse(manifest);
-        let version = '(v' + manifest.version + ')';
-        return version;
+        version = '(v' + manifest.version + ')';
       }
-      return null;
+      return version;
     }
   }
 };
