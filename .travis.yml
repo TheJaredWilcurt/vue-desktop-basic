@@ -9,4 +9,3 @@ script:
     - npm run lint
     - npm run sasslint
     - npm run build
-
