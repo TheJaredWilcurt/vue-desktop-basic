@@ -3,7 +3,7 @@
     <h2>Features:</h2>
     <p><em>vue-desktop-basic</em> comes with:</p>
     <ul>
-      <li v-for="(feature, index) in features" :key="'feature' + index">
+      <li v-for="(feature, featureIndex) in features" :key="'feature' + featureIndex">
         <a href="#" @click.prevent="openInDefaultBrowser(feature.url)">{{ feature.name }}</a>
         <small v-if="feature.version">
           (v{{ feature.version }})

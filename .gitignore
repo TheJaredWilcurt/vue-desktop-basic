@@ -59,4 +59,3 @@ typings/
 
 dist/
 package-lock.json
-vue-devtools/
