@@ -7,10 +7,10 @@
     <!-- Vue Router  -->
     <nav>
       <router-link
-        v-for="(route, index) in router.options.routes"
+        v-for="(route, routeIndex) in $router.options.routes"
         v-if="route.component"
         :to="route.path"
-        :key="index"
+        :key="'route' + routeIndex"
       >
         {{ route.name }}
       </router-link>

@@ -6,6 +6,7 @@
 
 This is a boilerplate for a simple desktop app. It comes with tips about common tasks for a desktop app.
 
+
 ### Features
 
 The following are already set up:
@@ -13,6 +14,7 @@ The following are already set up:
 * Vue.js
 * Vue-Router
 * Vuex
+* Vue-DevTools
 * Sass
 * Sasslint
 * ESLint
@@ -40,6 +42,11 @@ The following are already set up:
 1. `npm run build`
 
 All settings regarding the build are handled in the `package.json`.
+
+
+### Vue-DevTools
+
+If you want Vue-DevTools to be accessible in the Chromium DevTools in your app, you cannot use the minified version of Vue.js (use `vue.js` not `vue.min.js`).
 
 
 * * *

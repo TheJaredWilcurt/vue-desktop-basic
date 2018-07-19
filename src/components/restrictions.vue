@@ -8,7 +8,21 @@
       <li>
         You can import any Node module and use it in your code, however when requiring them inside <code>.vue</code> files, you have to use <code>nw.require</code>.
         <ul>
-          <li><code>var path = nw.require('path');</code></li>
+          <li><code>const path = nw.require('path');</code></li>
+        </ul>
+      </li>
+      <li>
+        When referencing a globally declared variable, like something on the <code>window</code> object, in the template section of a component, you will need to create a <strong>computed</strong> value that returns the global item of the same name.
+        <ul>
+          <li><code v-pre>&lt;div&gt;{{ nw.App.dataPath }}&lt;/div&gt;</code></li>
+          <li>
+            <pre>
+computed: {
+  nw: function () {
+    return nw;
+  }
+}</pre>
+          </li>
         </ul>
       </li>
     </ul>

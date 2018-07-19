@@ -3,10 +3,13 @@
     <h2>Features:</h2>
     <p><em>vue-desktop-basic</em> comes with:</p>
     <ul>
-      <li v-for="(feature, index) in features" :key="index">
+      <li v-for="(feature, featureIndex) in features" :key="'feature' + featureIndex">
         <a href="#" @click.prevent="openInDefaultBrowser(feature.url)">{{ feature.name }}</a>
         <small v-if="feature.version">
           (v{{ feature.version }})
+        </small>
+        <small v-if="!feature.version && feature.packageName">
+          {{ getVersionNumber(feature.packageName) }}
         </small>
       </li>
     </ul>
@@ -26,7 +29,7 @@ module.exports = {
         },
         {
           name: 'NW.js Builder (Phoenix)',
-          version: JSON.parse(nw.require('fs').readFileSync('./node_modules/nwjs-builder-phoenix/package.json').toString()).version,
+          packageName: 'nwjs-builder-phoenix',
           url: 'https://github.com/evshiron/nwjs-builder-phoenix'
         },
         {
@@ -37,7 +40,7 @@ module.exports = {
         {
           name: 'Vue-Router',
           version: VueRouter.version,
-          url: 'https://router.vuejs.org/en/'
+          url: 'https://router.vuejs.org/en'
         },
         {
           name: 'Vuex',
@@ -46,8 +49,13 @@ module.exports = {
         },
         {
           name: 'HTTP-Vue-Loader',
-          version: JSON.parse(nw.require('fs').readFileSync('./node_modules/http-vue-loader/package.json').toString()).version,
+          packageName: 'http-vue-loader',
           url: 'https://github.com/FranckFreiburger/http-vue-loader'
+        },
+        {
+          name: 'Vue-DevTools',
+          packageName: 'vue-devtools',
+          url: 'https://github.com/vuejs/vue-devtools'
         }
       ]
     };
@@ -58,6 +66,24 @@ module.exports = {
     // so you need to open them in the user's default browser
     openInDefaultBrowser: function (url) {
       nw.Shell.openExternal(url);
+    },
+    // Check that the dependency exists, then read it's version number from its manifest
+    getVersionNumber: function (packageName) {
+      let fs = nw.require('fs');
+      let manifest = '';
+      let version = '';
+
+      if (fs.existsSync('./node_modules/' + packageName + '/package.json')) {
+        manifest = fs.readFileSync('./node_modules/' + packageName + '/package.json');
+      } else if (packageName === 'vue-devtools' && fs.existsSync('./node_modules/nw-vue-devtools/src/vue-devtools/package.json')) {
+        manifest = fs.readFileSync('./node_modules/nw-vue-devtools/src/vue-devtools/package.json');
+      }
+      if (manifest) {
+        manifest = manifest.toString();
+        manifest = JSON.parse(manifest);
+        version = '(v' + manifest.version + ')';
+      }
+      return version;
     }
   }
 };
