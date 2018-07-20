@@ -17,7 +17,8 @@
     "lint": "eslint --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "fix": "eslint --fix --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "sass": "node-sass -w -i -o=src/css --output-style=expanded --error-bell ./src/sass",
-    "sasslint": "sass-lint -c .sass-lint.yml -v -f table"
+    "sasslint": "sass-lint -c .sass-lint.yml -v -f table",
+    "sassfix": "sass-lint-auto-fix -c .sass-lint.yml"
   },
   "window": {
     "width": 800,
@@ -39,7 +40,9 @@
     "nw": "sdk",
     "nw-vue-devtools": "1.x.x",
     "nwjs-builder-phoenix": "1.x.x",
-    "sass-lint": "1.x.x"
+    "sass-lint": "1.x.x",
+    "sass-lint-auto-fix": "0.x.x",
+    "tjw-sasslint-rules": "1.x.x"
   },
   "build": {
     "nwVersion": "latest",

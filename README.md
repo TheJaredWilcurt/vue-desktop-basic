@@ -34,6 +34,7 @@ The following are already set up:
 1. `npm run fix` this will auto-fix any linting issues that `npm run lint` finds (not everything can be auto fixed)
 1. `npm run sass` will start watching for changes in the sass folder and process the changes to the css folder.
 1. `npm run sasslint` will lint your `.sass` and `.scss` files.
+1. `npm run sassfix` will attempt to auto-fix Sass linting issues, however it may take several runs and not everything can be auto fixed
 
 
 ## To do a build:
