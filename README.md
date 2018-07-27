@@ -18,6 +18,7 @@ The following are already set up:
 * Sass
 * Sasslint
 * ESLint
+* nwjs-builder-phoenix
 
 
 ## Usage
