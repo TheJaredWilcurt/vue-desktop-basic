@@ -9,7 +9,7 @@ This is a boilerplate for a simple desktop app. It comes with tips about common 
 
 ## Should I use this
 
-Probably not? It's more of a proof of concept. Can you run all of the features of a Vue app without the need for a bundler, since the process of bundling is pretty pointless for a desktop app (no point in shaving off 25KB when you are shipping 100MB).
+Probably not? It's more of a proof of concept to see if you run all of the features of a Vue app without the need for a bundler, since the process of bundling is pretty pointless for a desktop app (no point in shaving off 25KB when you are shipping 100MB).
 
 Still though, there are a lot of good tips for NW.js apps in there in general, that are applicable to any desktop app, whether it is using Vue & NW.js or React & Electron.
 
