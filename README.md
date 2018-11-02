@@ -15,6 +15,7 @@ The following are already set up:
 * Vue-Router
 * Vuex
 * Vue-DevTools
+* Vue-Test-Utils + Jest
 * Sass
 * Sasslint
 * ESLint
@@ -50,12 +51,13 @@ All settings regarding the build are handled in the `package.json`.
 If you want Vue-DevTools to be accessible in the Chromium DevTools in your app, you cannot use the minified version of Vue.js (use `vue.js` not `vue.min.js`).
 
 
+### Dependencies
+
+There are a lot of `dependencies` and `devDependencies` in the `package.json`. I've documented what they are used for on the wiki:
+
+* https://github.com/TheJaredWilcurt/vue-desktop-basic/wiki
+
+
 * * *
 
 All other instructions and details are inside the app.
-
-* * *
-
-### TO DO List:
-
-* Add in Vue-Test-Utils

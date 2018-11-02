@@ -8,4 +8,5 @@ install:
 script:
     - npm run lint
     - npm run sasslint
+    - npm test
     - node ./node_modules/.bin/build --concurrent --tasks linux-x86 --mirror https://dl.nwjs.io/ .

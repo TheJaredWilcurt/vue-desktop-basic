@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" ref="testApp">
 
     <!-- example of getting data from the Vuex State -->
-    <h1>{{ greeting }} World</h1>
+    <h1 ref="testGreeting">{{ greeting }} World</h1>
 
     <!-- Vue Router  -->
     <nav>
@@ -15,7 +15,7 @@
         {{ route.name }}
       </router-link>
       |
-      <a href="#" @click.prevent="openDevTools">Open Dev Tools</a>
+      <a href="#" @click.prevent="openDevTools" ref="testShowDevTools">Open Dev Tools</a>
     </nav>
 
     <router-view />

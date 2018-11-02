@@ -3,10 +3,7 @@ module.exports = {
     'parserOptions': {
         'parser': 'babel-eslint',
         'ecmaVersion': 8,
-        'sourceType': 'module',
-        'ecmaFeatures': {
-          'experimentalObjectRestSpread': true
-        }
+        'sourceType': 'module'
     },
     'env': {
         'browser': true,
@@ -14,7 +11,8 @@ module.exports = {
     },
     'globals': {
         'jsdom': true,
-        'Promise': true
+        'Promise': true,
+        'nw': true
     },
     'plugins': [
         'vue'
