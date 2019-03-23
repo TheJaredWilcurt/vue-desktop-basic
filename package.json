@@ -18,7 +18,8 @@
     "fix": "eslint --fix --config=.eslintrc.js src/**/*.js src/**/*.vue",
     "sass": "node-sass -w -i -o=src/css --output-style=expanded --error-bell ./src/sass",
     "sasslint": "sass-lint -c .sass-lint.yml -v -f table",
-    "sassfix": "sass-lint-auto-fix -c .sass-lint.yml"
+    "sassfix": "sass-lint-auto-fix -c .sass-lint.yml",
+    "validate": "npm run lint && npm run sasslint"
   },
   "window": {
     "width": 800,
@@ -35,6 +36,7 @@
   "devDependencies": {
     "babel-eslint": "8.x.x",
     "eslint": "4.x.x",
+    "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-vue": "4.x.x",
     "node-sass": "4.x.x",
     "nw": "sdk",

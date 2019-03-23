@@ -11,7 +11,14 @@ module.exports = {
     },
     'globals': {
         'jsdom': true,
-        'Promise': true
+        'Promise': true,
+        'nw': true,
+        'Vue': true,
+        'Vuex': true,
+        'VueRouter': true,
+        'httpVueLoader': true,
+        'store': true,
+        'router': true
     },
     // required to lint *.vue files
     'plugins': [
