@@ -3,10 +3,7 @@ module.exports = {
     'parserOptions': {
         'parser': 'babel-eslint',
         'ecmaVersion': 8,
-        'sourceType': 'module',
-        'ecmaFeatures': {
-          'experimentalObjectRestSpread': true
-        }
+        'sourceType': 'module'
     },
     'env': {
         'browser': true,
@@ -16,10 +13,12 @@ module.exports = {
         'jsdom': true,
         'Promise': true
     },
+    // required to lint *.vue files
     'plugins': [
         'vue'
     ],
-    'extends': 'plugin:vue/recommended',
+    'extends': ['plugin:vue/recommended', "plugin:jest/recommended"],
+    "plugins": ["jest"],
     'rules': {
         'arrow-parens':                ['off'],
         'brace-style':                 ['error', '1tbs', { 'allowSingleLine': true }],
@@ -36,7 +35,9 @@ module.exports = {
         'no-console':                  process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-debugger':                 process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-multi-spaces':             ['error'],
+        'no-restricted-syntax':        ['error', 'Property[method="true"]'],
         'no-unused-vars':              ['error'],
+        'no-undef':                    ['error'],
         // Only allow let and const, no var
         'no-var':                      ['error'],
         'object-curly-spacing':        ['error', 'always'],
