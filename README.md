@@ -26,6 +26,7 @@ The following are already set up:
 * Sasslint
 * ESLint
 * nwjs-builder-phoenix
+* [VSCode intellisense for nw](http://docs.nwjs.io/en/latest/For%20Users/FAQ/)
 
 
 ## Usage

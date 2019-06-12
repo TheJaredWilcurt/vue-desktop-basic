@@ -33,6 +33,20 @@
     "vue-router": "3.x.x",
     "vuex": "3.x.x"
   },
+  "devDepComments": {
+    "babel-eslint": "Allows linting of ES6+",
+    "eslint": "Linting .js and .vue files",
+    "eslint-plugin-jest": "Linter is aware of Jest globals",
+    "eslint-plugin-vue": "Linting of Vue Templates",
+    "node-sass": "Process .sass and .scss to .css",
+    "nw": "Latest NW.js SDK version",
+    "nw-vue-devtools": "Downloads latest Vue DevTools, modifies it, does a build so it works with NW.js",
+    "nwjs-builder-phoenix": "Automates doing dist builds of your desktop app",
+    "nwjs-types": "Gives VSCode intellisense for nw.whatever",
+    "sass-lint": "Lints your Sass Files",
+    "sass-lint-auto-fix": "Attempts to auto-fix Sass linting problems",
+    "tjw-sasslint-rules": "A very strict ruleset for Sass linting"
+  },
   "devDependencies": {
     "babel-eslint": "8.x.x",
     "eslint": "4.x.x",
@@ -42,9 +56,10 @@
     "nw": "sdk",
     "nw-vue-devtools": "1.x.x",
     "nwjs-builder-phoenix": "1.x.x",
+    "nwjs-types": "^1.0.0",
     "sass-lint": "1.x.x",
     "sass-lint-auto-fix": "0.x.x",
-    "tjw-sasslint-rules": "1.x.x"
+    "tjw-sasslint-rules": "2.x.x"
   },
   "build": {
     "nwVersion": "latest",
