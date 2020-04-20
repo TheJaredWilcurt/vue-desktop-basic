@@ -14,6 +14,13 @@ Probably not? It's more of a proof of concept to see if you can run all of the f
 Still though, there are a lot of good tips for NW.js apps in there in general, that are applicable to any desktop app, whether it is using Vue & NW.js or React & Electron.
 
 
+## What should I use instead?
+
+`NW-Vue-CLI-Example` is basically a normal Vue-CLI project with some additional setup already added in to work as a desktop app.
+
+* https://github.com/nwutils/nw-vue-cli-example
+
+
 ### Features
 
 The following are already set up:
