@@ -15,9 +15,8 @@ Still though, there are a lot of good tips for NW.js apps in there in general, t
 
 **What should I use instead?**
 
-`NW-Vue-CLI-Example` is basically a normal Vue-CLI project with some additional setup already added in to work as a desktop app.
-
-* https://github.com/nwutils/nw-vue-cli-example
+* [NW.js + Vue 3 + Vite + Pinia + Vitest + Vue-DevTools](https://github.com/nwutils/nw-vue3-boilerplate) - This the newest/most robust/best option for desktop apps with Vue.
+* [NW-Vue-CLI-Example](https://github.com/nwutils/nw-vue-cli-example) is basically a normal Vue-CLI project with some additional setup already added in to work as a desktop app.
 
 
 ### Features
